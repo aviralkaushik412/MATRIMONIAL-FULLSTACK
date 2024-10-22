@@ -1,0 +1,1979 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    background-size:cover; 
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.mpg{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Ensures the content covers the full height */
+
+}
+.content {
+    position: relative;
+  }
+  
+  .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/roro.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateX(var(--bg-translate-x, 0px)); /* Only use the X translation */
+    z-index: -1; /* Keep it behind other content */
+  }
+  
+  
+.content{
+
+    margin-top:4vw !important;
+    background-color: rgba(251, 251, 240 , 0.1);
+    background-blend-mode: overlay; /* Blends the color over the image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Fixes the background image during scroll */
+    height: 95vh; /* Full height to create a prominent effect */
+    
+ 
+}
+
+.header {
+
+    /* border-radius: 5px; */
+    position: fixed; /* Fixed position to stick to the top */
+    top: 0; /* Sticks to the top */
+    height: 4vw;
+    background:beige;
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+
+
+    display: flex;
+    flex-direction: column;
+    /* Ensure the shadow doesn't affect other elements */
+
+    /* Add shadow at the bottom edge */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+}
+
+.p1header{
+    
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.logo{
+
+    background-image: url('images/pngegg.png');
+    height: 3vw;
+    width: 3vw;
+    background-size: cover;
+    margin-top: 0.5vw;
+    margin-left: 10px;
+
+}
+
+.title{
+
+    color: rgb(21, 63, 136);
+    margin-left: 10px;
+    margin-top: .6vw;
+    font-size: 2vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnss{
+
+    display: flex;
+    gap: 0.5vw; /* Adds space between the buttons */
+    margin-right:31vw; /*Pushes the buttons to the right */
+    margin-left: auto;
+}
+
+.btn{
+    
+    margin-top: 1.2vw;
+    height: 1vw;
+    margin-left:1vw;
+    
+    /* background-color:rgb(196, 163, 126);  */
+    border-width:0.15vw ; /* Remove borders */
+    border-style: solid;
+    border-color: transparent;
+
+    color: rgb(0, 0, 0); /* White text */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2px; /* Some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1vw; /* Increase font size */
+    cursor: pointer; /* Add a pointer on hover */
+    border-radius: 9px; /* Rounded corners */
+    padding-bottom: 0.3vw;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    
+}
+
+.btn:hover {
+
+    background-color: rgba(75, 148, 164, 0.8); /* Darker green on hover */
+
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
+/* Three-bar menu */
+.threebars {
+    /* position: relative; ---> find what it does */ 
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    margin-right: 1vw;
+}
+
+
+.menu-icon {
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3vw; /* Adjust width */
+    height: 1.3vw; /* Adjust height */
+
+}
+
+.bar {
+
+    background-color: #333; /* Bar color */
+    height: 0.2vw; /* Bar thickness */
+    width: 2vw; /* Full width */
+    border-radius: 4px; /* Rounded edges */
+}
+
+.dropdown-content {
+
+    display: none;
+    position: absolute;
+    right: 2vw;
+    top: 3vw;
+    background-color:rgb(255, 255, 255);
+    min-width: 9vw;
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.dropdown-content a {
+    z-index: 1002;
+
+   
+
+    color: black;
+    padding: 1vw 1.5vw;
+    text-decoration: none;
+    font-size: 1.3vw;
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+.dropdown-content a:hover {
+
+    color: rgb(90, 90, 90);
+    transition: 0.3s;
+    transform: scale(1.1);
+
+}
+
+/* Show the dropdown menu on hover */
+.threebars:hover .dropdown-content {
+
+    display: block;
+    z-index: 2000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+
+.boxes{
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw; /* Adds space between the buttons */
+
+}
+
+.box1{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 37vw; 
+
+}
+
+.findyours button {
+
+    background: linear-gradient(to right, rgb(159, 158, 158), rgb(0, 0, 0)); /* Gradient color from yellow to green */
+    color: white; /* Text color */
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /* Font style */
+    padding: 2vw 4vw; /* Padding inside the button */
+    text-align: center; /* Center the text */
+    font-size: 1.5vw; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 2vw; /* Elliptical rounded corners */
+    border: none; /* Remove border */
+    display: inline-block; /* Makes the button fit its content */
+    margin: 0 auto; /* Center the button */
+    display: block; /* Ensure the button takes the full width of its parent container */
+    margin-top: 2vw;
+}
+
+
+.findyours{
+    margin-top: 29vw;   
+    transform: translateX(10vw);
+}
+
+
+
+.cola{
+
+    position:fixed;
+    width: 48vw;
+    height: 25vw;
+    margin-top: 4vw;
+    margin-left: -6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    background: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2vw;
+    opacity: 1;
+    /* background-attachment: fixed; */
+    
+
+}
+
+.bigt p{
+
+    font-size: 4vw;
+    font-family: cursive;
+    margin-left: 3vw;
+    margin-top: 0px;
+    margin-bottom: 1vw;
+
+}
+
+.bigt p2{
+
+    color: rgb(0, 204, 255);
+}
+
+.intro{
+
+    font-size: 1.2vw;
+    font-family: cursive;
+    justify-content: center;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+    /* margin-left: 3.5vw; */
+
+}
+
+.exp{
+
+    margin-left: 3.5vw;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+    margin-top: 0.5vw; /* Reduce top margin */
+
+    margin-bottom: 0.5vw; /* Add a small bottom margin */
+    line-height: 1.2; /* Adjust line height */
+
+}
+
+.box2{
+
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    
+    background-size: cover;
+      
+}
+
+.slishow{
+    position:fixed;
+    width: 45vw;
+
+    margin-left: 7vw;
+    margin-top: -4.5vw;
+    height: 45vw;
+    background-image: url('images/slisli.jpg');
+    background-size: cover;
+    
+    border: 0.8vw solid rgb(102, 101, 101);
+
+    border-top-left-radius: 40vw;
+    border-bottom-left-radius: 40vw;
+    border-top-right-radius: 40vw;
+    border-bottom-right-radius: 40vw;
+    margin-right: 0vw;
+    z-index: -1;
+    
+
+}
+
+.ribbon{
+
+    display:flex;
+    flex-direction: column;
+    background-image: url('images/ribb.webp');
+    background-size: cover; /* Ensure the image covers the area */
+    background-repeat: no-repeat; /* Prevent repeating */
+
+    height: 14vw;
+    width:17vw;
+    border-radius: 20px;
+    margin-top:-1vw;
+    margin-left:61vw;
+    position: fixed;
+
+    top: 1.8vw; /* Adjust as needed */
+    left: 22vw; /* Adjust as needed */
+    z-index: 10;
+    
+
+}
+
+.ribb1{
+    color: rgb(139, 19, 19);
+    margin-top:-1.5vw; 
+    margin-left:8vw ;
+    font-size: 4.5vw;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ribb2{
+    color: rgb(0, 0, 0);
+
+
+    justify-content: center;
+    text-align: center;
+    font-size: 1vw;
+    margin-top:-5vw; 
+    margin-left: 4.5vw;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+    
+}
+
+.ss{
+
+    width: 15vw; /* Adjust width accordingly */
+    background-color: rgb(255, 255, 255);
+    margin-left: 1vw;
+    margin-right: 4vw;
+    text-align: center;
+    padding-top: 1vw; 
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    font-size: 1.8vw;
+    height: 4vw;
+    z-index: 1;
+    border-radius: 1vw;
+    box-shadow: 0 1vw 0.7vw rgba(0, 0, 0, 0.3);
+
+}
+
+.ss:hover{
+
+    transform: scale(1.2);
+    transition: 0.5s ;
+}
+
+
+.content2{
+
+    display: flex;
+    flex-direction: column;
+    background-image: 
+    linear-gradient(to bottom, rgba(245, 245, 201, 0.5) 0%, rgba(38, 172, 169, 0.4) 15%, rgba(38, 172, 169, 0.7) 40%, rgb(52, 179, 177) 80%);
+    background-position: center; /* Centers the image */
+  
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+
+    height: 60vw;
+
+}
+
+
+
+.c2p1{
+
+    display: flex;
+    flex-direction: column;
+    color: rgb(197, 195, 195);
+    text-align: center;
+    font-size: 6vw;
+    background: rgb(21, 34, 63);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index :200;
+}
+
+.c2p1 .titleee {
+    margin-top: 3vw;
+    margin-bottom: 0vw;
+    font-size: 3vw;
+    color: rgb(255, 179, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+}
+
+.c2p1 .description {
+    font-size: 1.1vw;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+
+
+
+}
+
+
+
+
+.c2p2{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.s1 , .s2 , .s3, .s4{
+    
+    margin-top: 5vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 35vw;
+    width: 20vw;
+    border-radius: 0.5vw;
+    
+}
+
+.s1 , .s2 , .s3, .s4{
+
+    display: flex;
+    flex-direction: column;
+    z-index: 19;
+    transform: translateX(-100vw); /* Move it left */
+
+}
+
+
+.cou1 , .cou2 , .cou3 , .cou4 {
+
+    position: relative; /* Make sure the pseudo-element is positioned relative to the parent */
+
+
+    background-image: url('images/cou3.jpg'); /* Add the path to your image */
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the image within the element */
+    height: 34vw; /* Ensure the image covers the full height of the parent element */
+    width: 100%; /* Ensure the image covers the full width of the parent element */
+    border-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    transition: 0.4s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Mild black shadow */
+    z-index: 20;
+}
+
+.cou1::before, .cou2::before, .cou3::before, .cou4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16vw;
+    height: 31vw;
+    border-radius: inherit; /* Apply the same border radius */
+    z-index: 1; /* Make sure the overlay is on top of the image */
+    transition: 0.7s;
+}
+
+.cou1:hover::before, .cou2:hover::before, .cou3:hover::before, .cou4:hover::before {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the overlay on hover */
+}
+
+.cou2{
+
+    background-image: url('images/cou4.jpg'); /* Add the path to your image */
+}
+
+.cou3{
+
+    background-image: url('images/cou2.jpeg');
+}
+
+.cou4{
+
+    background-image: url('images/cou5.jpg');
+
+}
+
+.cou1:hover{
+
+    scale: 1.1;  
+}
+
+.cou2:hover{
+
+    scale: 1.1;
+       
+}
+
+.cou3:hover{
+
+     scale: 1.1;
+       
+}
+
+.cou4:hover{
+
+    scale: 1.1;
+      
+}
+
+
+.cou1:hover::before{
+
+    content:'"We never expected to find such a deep connection so quickly, but from our first conversation, we knew something special was happening. We complement each other in ways we never thought possible, bringing out the best in one another. Together, we feel like we can face anything life throws our way. Every moment we share is filled with love, laughter, and a sense of peace that only comes from being with your soulmate. We are so excited to start this new chapter together, hand in hand, and to create a lifetime of beautiful memories."';  
+    color: rgb(255, 224, 224); /* Change this to the desired color */
+    width:16vw;
+    padding-left: 2vw; /* Adds padding only to the text content */
+    padding-right: 2vw; /* Adds padding only to the text content */
+    height: 31vw;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(1); /* No scaling transformation */
+
+
+}
+
+.cou2:hover::before{
+
+    content:'"We never imagined discovering such a deep and meaningful connection so quickly. From our very first conversation, it was evident that something truly special was blossoming between us. We find that we complement each other perfectly, drawing out the best in one another in ways we never thought possible. Together, we feel ready to face any challenge that comes our way. Every moment we share is filled with joy, laughter, and a tranquil sense of belonging that only comes from being with the one you love."';
+
+    color: white; /* Change this to the desired color */
+    padding-left: 2vw; /* Adds padding only to the text content */
+    padding-right: 2vw; /* Adds padding only to the text content */
+    height: 31vw;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(1);
+}
+
+.cou3:hover::before{
+
+    content:'"We could never have anticipated finding such a profound connection so swiftly. From the very start of our journey together, it was clear that something extraordinary was unfolding. We complement each other in remarkable ways. Each shared moment is filled with laughter, joy, and a deep sense of contentment that only comes from being with your true partner. We are thrilled to embark on this new chapter, hand in hand, and to craft a lifetime of wonderful memories together."';
+    color: white; /* Change this to the desired color */
+    padding-left: 2vw; /* Adds padding only to the text content */
+    padding-right: 2vw; /* Adds padding only to the text content */
+    height: 31vw;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(1);
+       
+}
+
+.cou4:hover::before{
+
+    content:'"When we first met, we never imagined how quickly we would develop such a profound connection. Our initial conversations felt like a spark igniting, revealing a bond that grew deeper with each passing day. We find strength in each others presence and joy in our shared experiences, making every day feel like a new adventure. The love and laughter we share create a sense of harmony and excitement that only comes from being with someone who truly understands you."';
+    color: white; /* Change this to the desired color */
+    padding-left: 2vw; /* Adds padding only to the text content */
+    padding-right: 2vw; /* Adds padding only to the text content */
+    height: 31vw;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(1);
+      
+}
+
+.wed1 , .wed2 , .wed3 , .wed4{
+
+    font-size: 1.3vw;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+
+}
+
+
+/*----------------------------------------------------*/
+
+
+
+.content3{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vw;
+    background: linear-gradient(
+    to bottom, 
+    rgb(52, 179, 177) 0%, 
+    rgba(255, 174, 0, 0.4) 50%, 
+    rgba(255, 174, 0, 0.5) 75%, 
+    rgba(255, 174, 0, 0.6) 95%
+
+);
+    position:relative;
+    z-index: 1;
+
+}
+
+.c3cl1{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(240, 248, 255, 0.325);
+    margin-top:-5vw;
+    
+}
+
+.shst{
+
+    color: rgba(0, 0, 0, 0.699);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vw;
+}
+
+.shst p{
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.adst button{
+
+    color: #ddd;
+    padding: 2vw 4vw;
+    margin-top: 2vw;
+    border-radius: 2vw;
+    background-color: rgb(0, 0, 0);
+    font-size: 2vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-width: 0vw;
+    transition: 0.4s;
+
+    z-index: 100;
+    
+}
+
+.adst button:hover{
+
+    background-color:rgb(0, 0, 0 , 0.5);
+
+}
+
+.c3cl2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.lbirds{
+
+    height: 44vw;
+    width: 49vw;
+    background-image: url('images/couple-transparent-13.png');
+    background-size: cover;
+    margin-left: 3vw;
+    margin-right: -100vw;
+}
+
+.form{
+
+    height: 40vw;
+    width: 40vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    background-color: rgb(254, 249, 238);
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.ele{
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-bottom: 2.5vw;
+    margin-top: 1vw;
+}
+
+.heading{
+    font-size: 3vw;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
+
+.lab{
+    font-size: 1.4vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.selbox{
+    width: 36vw;
+    height: 2.5vw;
+    border-radius: 0.5vw;
+    transition: 0.3s;
+}
+
+.srchsm{
+    width: 95%;
+    height: 4vw;
+    background-color: rgb(103, 103, 103);
+    color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    border-color: rgba(0, 0, 0, 0.0);
+    font-size: 1.4vw;
+    transition: 0.4s;
+
+    cursor: pointer; /* Add a pointer on hover */
+
+}
+
+.opti{
+    font-size: 1vw;
+}
+
+.selbox:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.srchsm:hover{
+    transform: scale(1.05);
+
+}
+
+
+.content4{
+    display: flex;
+    flex-direction:column;
+    height:64vw;
+    background-color: #000000e6;
+
+
+}
+
+.trust{
+    display: flex;
+    flex-direction: column;
+
+    background-color:beige;
+    height: 20vw;
+    box-shadow: 0px 0px 1vw 0.6vw rgba(255, 255, 255, 0.8);
+
+    z-index: 9;
+}
+
+.holding{
+
+    margin-top: -1.5vw;
+    text-align: center;
+    font-size: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+}
+
+.trcon{
+    margin-left:5vw ;
+    margin-right: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: -2vw;
+    font-size: 1.2vw;
+}
+
+.secsec{
+
+    display: flex;
+    flex-direction:row;
+    background-color: rgb(0, 0, 0);
+    border-top-right-radius: 150vw;
+    border-bottom-left-radius: 150vw;
+    height: 68vw;
+
+
+}
+
+/* Define styles for .sec as your main content container */
+.secsec {
+    position: relative;  /* Keeps the normal scrolling behavior */
+    transition: opacity 1s ease-out;  /* Smooth opacity transition */
+    opacity: 1;  /* Content starts fully visible */
+  }
+  
+  /* Stop scrolling effect */
+  .stop-scroll {
+    position: fixed;  /* Fix the position to prevent scrolling */
+    top: 0;  /* Stay at the top of the viewport */
+    width: 100%;  /* Maintain the full width */
+  }
+  
+  /* Fading out effect */
+  .fade-out {
+    opacity: 0;  /* Full fade-out when this class is applied */
+  }
+
+
+/*----------------->>>>*/  
+
+.hitw{
+
+    height: 100%;
+    width:40vw;
+}
+
+.hitw p3{
+    color:aquamarine;
+
+}
+
+.hitw p{
+    margin-top: 8vw;
+    margin-left: 1.5vw;
+
+    color: #ffffff;
+    font-size: 9vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+.wrwr{
+    margin-left: 1.5vw;
+}
+
+.blabla{
+
+    background-color: rgba(255, 255, 255, 0.667);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    display: block;
+    color:rgb(0, 0, 0);
+    margin-left: 3vw; 
+    margin-right: 1vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+    font-size: 1.5vw;
+    margin-top: -6vw;
+    border-radius: 2vw;
+    box-shadow: 0px 0px 1vw 0.6vw rgba(255, 255, 255, 0.8);
+
+}
+
+.steps{
+    margin-top: 1vw;
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    width:60vw;
+    justify-content: space-around;
+
+
+}
+
+.create{
+
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 15vw;
+    margin-left: 7vw;
+    border-radius: 3vw;  
+    justify-content: space-between;
+    transition: 0.4s;
+
+}
+
+.create:hover{
+
+    transform: scale(1.1);
+    z-index: 2;
+    /* box-shadow: 0px 0px 2vw 1vw rgba(255, 255, 255, 0.8); */
+
+}
+.find{
+
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 15vw;
+    margin-left: 20vw;
+    margin-top: -10vw;
+    border-radius: 3vw; 
+    transition: 0.4s; 
+
+
+}
+
+.find:hover{
+
+    transform: scale(1.1);
+    z-index: 2;
+    /* box-shadow: 0px 0px 2vw 1vw rgba(255, 255, 255, 0.8); */
+
+}
+.meet{
+
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 15vw;
+    margin-top: -10vw;
+    margin-left: 7vw;
+    border-radius: 3vw; 
+    transition: 0.4s; 
+
+
+}
+
+.meet:hover{
+
+    transform: scale(1.1);
+    z-index: 2;
+    /* box-shadow: 0px 0px 2vw 1vw rgba(255, 255, 255, 0.8); */
+
+}
+
+
+.createtxt{
+    background-color: rgb(220, 156, 19);
+    border-radius: 2vw;
+    margin-left: 1vw;
+    box-shadow: 0px 0px 1vw 0.6vw rgba(255, 255, 255, 0.8);
+
+}
+
+.create01 p{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5vw;
+}
+
+.createtxt p{
+    font-size: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: 1.5vw;
+}
+
+.createtxt p2{
+
+    font-size: 1vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: -1vw;
+    display: block; /* Makes the element a block-level element */
+
+
+
+}
+
+
+
+
+.findtxt{
+    background-color: rgb(66, 203, 105);
+    border-radius: 2vw;
+    margin-left: 1vw;
+    box-shadow: 0px 0px 1vw 0.6vw rgba(255, 255, 255, 0.8);
+
+}
+
+.find02 p{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5vw;
+}
+
+.findtxt p{
+    font-size: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: 1.5vw;
+}
+
+.findtxt p2{
+
+    font-size: 1vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: -1vw;
+    display: block; /* Makes the element a block-level element */
+
+
+}
+
+
+
+.meettxt{
+    background-color: rgb(249, 255, 127);
+    border-radius: 2vw;
+    margin-left: 1vw;
+    box-shadow: 0px 0px 1vw 0.6vw rgba(255, 255, 255, 0.8);
+
+}
+
+.meet03 p{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5vw;
+}
+
+.meettxt p{
+    font-size: 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: 1.5vw;
+}
+
+.meettxt p2{
+
+    font-size: 1vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    margin-top: -1vw;
+    display: block; /* Makes the element a block-level element */
+
+
+}
+
+
+
+
+.content5{
+    display: flex;
+    flex-direction: column;
+    height: 120vw;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #000000e6;
+}
+
+
+.featured p{
+    color: rgb(255, 255, 255);
+    font-size: 4vw;
+    margin-left: 4vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width:40vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 1vw;
+}
+
+
+.profiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 110vw;
+}
+
+.pp{
+    background-color: #000000;
+    background-size: cover;
+    width: 17vw;
+    height: 20vw;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+
+    margin-top:2vw ;
+    border-radius: 1vw;
+    
+}
+
+
+.pp:hover{
+    box-shadow: 0px 0px 2vw 0.2vw rgba(255, 255, 255, 0.598);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.op{
+    height:97%;
+    border-radius: 1vw;
+    margin:0.3vw;
+}
+
+.p1im {
+    background-image: url('images/p1.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p1n {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100%;
+    border-radius: 1vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9)20%, rgba(0, 0, 0, 0) 50%); 
+
+}
+
+.p2im {
+    background-image: url('images/p2.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p2n {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100%;
+    border-radius: 1vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9)20%, rgba(0, 0, 0, 0) 50%); 
+
+}
+
+.p3im {
+    background-image: url('images/p3.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p3n , .p4n , .p5n , .p6n , .p7n , .p8n , .p9n , .p10n , .p11n , .p12n , .p13n , .p14n , .p15n , .p16n {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100%;
+    border-radius: 1vw;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9)20%, rgba(0, 0, 0, 0) 50%); 
+
+}
+
+.p4im {
+    background-image: url('images/p4.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p5im {
+    background-image: url('images/p5.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p6im {
+    background-image: url('images/p6.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p7im {
+    background-image: url('images/p7.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p8im {
+    background-image: url('images/p8.jpeg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p9im {
+    background-image: url('images/p9.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+
+.p10im {
+    background-image: url('images/p10.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p11im {
+    background-image: url('images/p11.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p12im {
+    background-image: url('images/p12.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p13im {
+    background-image: url('images/p13.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p14im {
+    background-image: url('images/p14.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p15im {
+    background-image: url('images/p15.webp');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+.p16im {
+    background-image: url('images/p16.jpg');
+
+    background-size: cover;
+    height: 97%;
+    z-index: 0;
+}
+
+/**================================================================*/
+
+.p1 ,.p5 , .p9 , .p13{
+    position: relative;
+    transform: translateX(-15vw);
+}
+
+.p4, .p8 , .p12 , .p16{
+    position: relative;
+    transform: translateX(15vw);
+}
+
+.p2 , .p6 , .p10 , .p14{
+    position: relative;
+    transform: translateX(-5vw);
+}
+
+.p3 , .p7 , .p11 , .p15{
+    position: relative;
+    transform: translateX(5vw);
+}
+
+.namenl{
+    font-size: 2.5vw;
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 11.5vw;
+    margin-left: 1vw;
+}
+
+.enl{
+    font-size: 1vw;
+    margin-top: -2vw;
+}
+
+.view{
+    margin-top: 15.5vw;
+    margin-right: 1vw;
+}
+
+.view button{
+    background-color: rgb(246, 255, 0);
+    font-size: 1vw;
+    height: 3vw;
+    width: 4vw;
+    border: none;
+    border-radius: 0.5vw;
+}
+
+.view button:hover{
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 2vw; /* Adjusted padding */
+    background-color: #fffdce;
+    color: #000000;
+    font-size: 1.4vw; /* Adjusted font size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw; /* Adjusted width */
+    max-width: 90vw; /* Max width set to 90% of viewport width */
+}
+
+.footer-left {
+    margin-right: 3vw;
+    font-size: 4vw; /* Adjusted font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 0, 0);
+}
+
+.footer-divider {
+    border-left: 0.15vw solid #000000; /* Adjusted border width */
+    height: 20vw; /* Adjusted height */
+    margin: 0 2vw; /* Adjusted margin */
+}
+
+.footer-about small,
+.footer-support small {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1vw; /* Adjusted font size */
+    line-height: 1.4; /* Added line height for readability */
+}
+
+.footer-support a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 2vw; /* Adjusted margin */
+    text-align: center;
+    width: 90vw; /* Adjusted width */
+}
+
+strong{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(25, 56, 148);
+}
+
+
+/* ----------------------- for tab responsiveness*/
+@media screen and (max-width: 738px) and (min-width: 550px) {
+    
+    .boxes {
+
+        flex-direction: column; /* Stack box1 and box2 vertically */
+        align-items: center; /* Center them horizontally */
+        gap: 5vw;
+
+    }
+
+    .box1, .box2 {
+
+        width: 90vw; /* Make both boxes take up most of the screen width */
+        display: flex;
+        flex-direction: column; /* Ensure both boxes display their content in a column layout */
+    }
+
+    .cola, .slishow {
+
+        width: 100%; /* Make the content inside the boxes fill the width */
+        margin: 0; /* Remove extra margins */
+    }
+
+    .slishow {
+
+        margin-top: 0.5vw; /* Add some space between box1 and box2 */
+        border-radius: 30px;
+        border-width: 0.4vw;
+    }
+
+    .bigt{
+
+        display:flex;
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    .intro{
+
+        width: 30vw;
+        margin-top: 4vw;
+    }
+
+    .greet{
+        margin-top: 2.5vw;
+    }
+
+    .content2{
+        height: 100vw;
+    }
+
+    .shst p{
+        margin-top: 0vw;
+    }
+
+    .adst{
+        margin-top: 0vw;
+    }
+
+    .c2p2{
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+    .s1, .s2, .s3, .s4 {
+
+        width: 45%; /* Each takes about half the width of the parent container */
+        margin-bottom: 1vw; /* Add some space below each item */
+
+    }
+
+    .cou1:hover{
+        scale: 1.1; 
+    }
+    
+    .cou2:hover{
+        scale: 1.1;      
+    }
+    
+    .cou3:hover{
+        scale: 1.1;
+    }
+    
+    .cou4:hover{
+        scale: 1.1;
+    }
+
+    .cou1::before, .cou2::before, .cou3::before, .cou4::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35vw;
+        height: 31vw;
+        border-radius: inherit; /* Apply the same border radius */
+        z-index: 1; /* Make sure the overlay is on top of the image */
+        transition: 0.5s;
+    }
+    
+    .cou1:hover::before, .cou2:hover::before, .cou3:hover::before, .cou4:hover::before {
+        background-color: rgba(0, 0, 0, 0.8); /* Darken the overlay on hover */
+    }
+
+    .cou1:hover::before{
+
+        content:'"We never expected to find such a deep connection so quickly, but from our first conversation, we knew something special was happening. We complement each other in ways we never thought possible, bringing out the best in one another. Together, we feel like we can face anything life throws our way. Every moment we share is filled with love, laughter, and a sense of peace that only comes from being with your soulmate. We are so excited to start this new chapter together, hand in hand, and to create a lifetime of beautiful memories."';  
+        color: rgb(255, 224, 224); /* Change this to the desired color */
+        width:16vw;
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 31vw;
+        width: 40vw;
+
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1); /* No scaling transformation */
+        font-size: 1.5vw;
+
+    
+    }
+    
+    .cou2:hover::before{
+    
+        content:'"We never imagined discovering such a deep and meaningful connection so quickly. From our very first conversation, it was evident that something truly special was blossoming between us. We find that we complement each other perfectly, drawing out the best in one another in ways we never thought possible. Together, we feel ready to face any challenge that comes our way. Every moment we share is filled with joy, laughter, and a tranquil sense of belonging that only comes from being with the one you love."';
+    
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 31vw;
+        width: 40vw;
+
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 1.5vw;
+
+    }
+    
+    .cou3:hover::before{
+    
+        content:'"We could never have anticipated finding such a profound connection so swiftly. From the very start of our journey together, it was clear that something extraordinary was unfolding. We complement each other in remarkable ways. Each shared moment is filled with laughter, joy, and a deep sense of contentment that only comes from being with your true partner. We are thrilled to embark on this new chapter, hand in hand, and to craft a lifetime of wonderful memories together."';
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        width: 40vw;
+        height: 31vw;
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 1.5vw;
+
+           
+    }
+    
+    .cou4:hover::before{
+    
+        content:'"When we first met, we never imagined how quickly we would develop such a profound connection. Our initial conversations felt like a spark igniting, revealing a bond that grew deeper with each passing day. We find strength in each others presence and joy in our shared experiences, making every day feel like a new adventure. The love and laughter we share create a sense of harmony and excitement that only comes from being with someone who truly understands you."';
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        width: 40vw;
+        height: 31vw;
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 1.5vw;
+          
+    }
+
+    .adst button{
+
+        margin-top: 1.5vw;
+        
+    }
+    
+}
+
+/* ----------------------- for phone responsiveness*/
+
+@media screen and (max-width: 549px) {
+
+    .content{
+    
+    
+        background-attachment: fixed; /* Fixes the background image during scroll */
+        height: 60vh; /* Full height to create a prominent effect */
+    
+    }
+
+    .content{
+
+    background-image: url('images/newlyweds-hold-wedding-rings-their-hands.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay color with opacity */
+    background-blend-mode: overlay; /* Blend the image and overlay */
+    
+}
+
+    .intro {
+        display: none; /* Hide the intro section */
+    }
+
+    .greet p{
+
+        width: 90vw ; /* Make greet section cover the entire width */
+        font-size: 12vw;
+        text-align: center ; /* Center the text */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .greet p2{
+
+        color: black;
+        font-style: normal; /* Make the text bold */
+        font-size: 12vw ; /* Increase font size for better visibility */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .box1 {
+
+        width: 100vw;
+        height: 65vw ; /* Adjust the height to accommodate more content */
+        padding: 10px ; /* Add some padding if needed */
+    }
+
+    .cola{
+
+        background-color: rgba(255, 255, 255, 0.5);
+        width:92.5vw;
+        height: 51vw;
+        margin-left: 0px;
+        margin-right: 2vw;
+    }
+
+    .boxes {
+
+        flex-direction: column ;
+        gap: 5vw;
+    }
+
+    .box1, .box2 {
+        width: 100%; /* Make both boxes take full width */
+    }
+
+    .box2{
+        display:none;
+    }
+
+    /* agar media query mai xhanges dene hain toh completely alag class bna krr , firr krna */
+    .hello button {
+
+        background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); /* Gradient color from yellow to green */
+        color: rgb(0, 0, 0); /* Text color */
+        width: 25vw;
+        height: 8vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font style */
+        text-align: center; /* Center the text */
+        font-size: 3vw; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 2vw; /* Elliptical rounded corners */
+        transition: transform 0.3s; /* Smooth transition on hover */
+    }
+
+    .findyours button:hover {
+
+        transform: scale(1.2); /* Slightly enlarge the button on hover */
+    }
+
+    .btn{
+
+        display:none;
+    }
+
+    .header {
+        /* border-radius: 5px; */
+        height: 10vw;
+        background:beige;
+    
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Ensure the shadow doesn't affect other elements */
+    
+        /* Add shadow at the bottom edge */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+    }
+
+    .logo{
+
+        background-image: url('images/pngegg.png');
+        height: 7vw;
+        width: 7vw;
+        background-size: cover;
+        margin-top: 8px;
+        margin-left: 10px;
+    
+    }
+
+    .title{
+
+        color: rgb(0, 0, 0);
+        margin-left: 1vw;
+        margin-top: 1.8vw;
+        font-size: 5vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .menu-icon {
+
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 8vw; /* Adjust width */
+        height: 4vw; /* Adjust height */
+    
+    }
+
+    .bar {
+
+        background-color: #333; /* Bar color */
+        height: 0.5vw; /* Bar thickness */
+        width: 6vw; /* Full width */
+        border-radius: 4px; /* Rounded edges */
+    }
+
+    .dropdown-content {
+
+        display: none;
+        position: absolute;
+        right: 7vw;
+        top: 6vw;
+        background-color:rgb(255, 255, 255);
+        min-width: 30vw;
+        border-radius: 1vw;
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+
+        text-align: center;
+        color: black;
+        height: 6vw;
+        padding: 1vw 1.5vw;
+        text-decoration: none;
+        font-size: 3vw;
+        display: block;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-bottom: 1px solid #b4b3b3;
+    }
+
+    .dropdown-content a:hover {
+        
+        background: rgba(0, 0, 0, 0.6);
+        transition: 0.3s;
+    }
+
+    .content2{
+        height: 320vw;
+    }
+
+    .c2p2{
+
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    }
+
+    .s1, .s2, .s3, .s4 {
+
+        width: 70%; /* Each takes about half the width of the parent container */
+        margin-bottom: 1vw; /* Add some space below each item */
+        height: 70vw;
+    }
+
+    .cou1 , .cou2 , .cou3 , .cou4 {
+
+        background-size: cover; /* Ensure the image covers the element */
+        background-position: center; /* Center the image within the element */
+        height: 60vw; /* Ensure the image covers the full height of the parent element */
+        width: 100%; /* Ensure the image covers the full width of the parent element */
+        border-radius: 2vw;
+        border-bottom-right-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+        transition: 0.4s;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Mild black shadow */
+    }
+
+    .wed1 , .wed2 , .wed3 , .wed4{
+
+        font-size: 3vw;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(0, 0, 0);
+    }
+    
+    .cou1:hover{
+        scale: 1.1; 
+        
+    }
+    
+    .cou2:hover{
+        scale: 1.1;      
+    }
+    
+    .cou3:hover{
+        scale: 1.1;
+    }
+    
+    .cou4:hover{
+        scale: 1.1;
+    } 
+    
+    
+        .cou1::before, .cou2::before, .cou3::before, .cou4::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35vw;
+        height: 31vw;
+        border-radius: inherit; /* Apply the same border radius */
+        z-index: 1; /* Make sure the overlay is on top of the image */
+        transition: 0.5s;
+    }
+    
+    .cou1:hover::before, .cou2:hover::before, .cou3:hover::before, .cou4:hover::before {
+        background-color: rgba(0, 0, 0, 0.8); /* Darken the overlay on hover */
+    }
+
+    .cou1:hover::before{
+
+        content:'"We never expected to find such a deep connection so quickly, but from our first conversation, we knew something special was happening. We complement each other in ways we never thought possible, bringing out the best in one another. Together, we feel like we can face anything life throws our way. Every moment we share is filled with love, laughter, and a sense of peace that only comes from being with your soulmate. We are so excited to start this new chapter together, hand in hand, and to create a lifetime of beautiful memories."';  
+        color: rgb(255, 224, 224); /* Change this to the desired color */
+        width:16vw;
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 60vw;
+        width: 64vw;
+
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1); /* No scaling transformation */
+        font-size: 3vw;
+
+    
+    }
+    
+    .cou2:hover::before{
+    
+        content:'"We never imagined discovering such a deep and meaningful connection so quickly. From our very first conversation, it was evident that something truly special was blossoming between us. We find that we complement each other perfectly, drawing out the best in one another in ways we never thought possible. Together, we feel ready to face any challenge that comes our way. Every moment we share is filled with joy, laughter, and a tranquil sense of belonging that only comes from being with the one you love."';
+    
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 60vw;
+        width: 64vw;
+
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 3vw;
+
+    }
+    
+    .cou3:hover::before{
+    
+        content:'"We could never have anticipated finding such a profound connection so swiftly. From the very start of our journey together, it was clear that something extraordinary was unfolding. We complement each other in remarkable ways. Each shared moment is filled with laughter, joy, and a deep sense of contentment that only comes from being with your true partner. We are thrilled to embark on this new chapter, hand in hand, and to craft a lifetime of wonderful memories together."';
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 60vw;
+        width: 64vw;
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 3vw;
+
+           
+    }
+    
+    .cou4:hover::before{
+    
+        content:'"When we first met, we never imagined how quickly we would develop such a profound connection. Our initial conversations felt like a spark igniting, revealing a bond that grew deeper with each passing day. We find strength in each others presence and joy in our shared experiences, making every day feel like a new adventure. The love and laughter we share create a sense of harmony and excitement that only comes from being with someone who truly understands you."';
+        color: white; /* Change this to the desired color */
+        padding-left: 2vw; /* Adds padding only to the text content */
+        padding-right: 2vw; /* Adds padding only to the text content */
+        height: 60vw;
+        width: 64vw;
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center the content vertically */
+        text-align: center; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: scale(1);
+        font-size: 3vw;
+          
+    }
+
+}
+
