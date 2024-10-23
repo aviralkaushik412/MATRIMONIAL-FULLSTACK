@@ -1,0 +1,72 @@
+[
+    {
+        "name": "John",
+        "email": "john@fakeEmail.com",
+        "category": "Singer"
+    },
+    {
+        "name": "Jimmy",
+        "email": "jimmy@fakeEmail.com",
+        "category": "Artist"
+    },
+    {
+        "name": "YoYo",
+        "email": "yoyo@fakeEmail.com",
+        "category": "Singer"
+    },
+    {
+        "name": "Thomas",
+        "email": "thomas@fakeEmail.com",
+        "category": "Poet"
+    },
+    {
+        "name": "Jack",
+        "email": "jack@fakeEmail.com",
+        "category": "Designer"
+    },
+    {
+        "name": "Alex",
+        "email": "alex@fakeEmail.com",
+        "category": "Photographer"
+    },
+    {
+        "name": "Harry",
+        "email": "harry@fakeEmail.com",
+        "category": "Video Editor"
+    },
+    {
+        "name": "Michel",
+        "email": "michel@fakeEmail.com",
+        "category": "Digital Creator"
+    },
+    {
+        "name": "Donald",
+        "email": "donaldy@fakeEmail.com",
+        "category": "Actor"
+    },
+    {
+        "name": "Jackson",
+        "email": "jackson@fakeEmail.com",
+        "category": "Politician"
+    },
+    {
+        "name": "Jacob",
+        "email": "jacob@fakeEmail.com",
+        "category": "Businessman"
+    },
+    {
+        "name": "Freddy",
+        "email": "freddy@fakeEmail.com",
+        "category": "Scientist"
+    },
+    {
+        "name": "Obama",
+        "email": "obama@fakeEmail.com",
+        "category": "Entrepreneur"
+    },
+    {
+        "name": "Robert",
+        "email": "robert@fakeEmail.com",
+        "category": "Dancer"
+    }
+]
